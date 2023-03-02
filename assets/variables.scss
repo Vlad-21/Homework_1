@@ -1,0 +1,29 @@
+//colors
+$white: #ffffff;
+$black: #000000;
+$grey: 	#808080;
+$light-blue: #8ec5fc;
+$light-pink: #e0c3fc;
+$dark-grey: #3a6073;
+$light-black: #16222a;
+
+//leaner gradient
+$backround-gradient: linear-gradient(62deg, $light-blue 0%, $light-pink 100%);
+$footer-gradient: linear-gradient(59deg, $dark-grey, $light-black);
+
+//screen size
+$for-tablet: 612px;
+$for-desktope: 1024px; 
+
+//font
+$font-stack: Helvetica, sans-serif;
+
+//font-weight
+$weight-logo: 900;
+$weight-title: 700;
+$weight-text: 300;
+
+//font-size
+$size-logo: 30px;
+$size-title: 24px;
+$size-text: 18px;

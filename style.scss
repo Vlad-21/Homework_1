@@ -1,0 +1,118 @@
+@import './assets/variables.scss';
+@import './assets/mixin.scss';
+
+body {
+  @include flex();
+  margin: 0;
+  flex-direction: column;
+  position: relative;
+  @include tablet {
+    background: $backround-gradient;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.header {
+  @include responsive();
+  width: 100%;
+  height: 50px;
+  background: $white;
+  box-shadow: 0 4px 15px 0px $grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  &__logo {
+    @include font-stack($size-logo, $weight-logo, $black);
+    margin-left: 10px;
+  }
+  &__menu {
+    display: flex;
+    margin-right: 10px;
+    &__item {
+      margin: 0 5px;
+      a {
+        @include font-stack($size-text, $weight-title, $grey);
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
+  }
+}
+
+.main {
+  @include responsive();
+  width: 100%;
+  background: $white;
+  &__container {
+    @include flex();
+    width: 100%;
+    margin-top: 20px;
+    min-height: max-content;
+    background: $white;
+    flex-direction: column;
+    &__section-card {
+      @include flex();
+      width: 90%;
+      flex-direction: column;
+      text-align: center;
+      box-shadow: 0 4px 15px 0px $grey;
+      border-radius: 12px;
+      margin: 10px 0 15px;
+      &__title {
+        @include font-stack($size-title, $weight-title, $black);
+        line-height: $size-title;
+      }
+      &__text {
+        @include font-stack($size-text, $weight-text, $grey);
+        margin: 0 10px;
+      }
+      &__link {
+        @include font-stack($size-text, $weight-title, $grey);
+        margin: 10px 0;
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  @include responsive();
+  @include flex();
+  width: 100%;
+  background: $footer-gradient;
+  &__navigation {
+    @include flex();
+    flex-direction: column;
+    margin-bottom: 15px;
+    &__title {
+      @include font-stack($size-title, $weight-title, $white);
+      line-height: $size-title;
+      margin: 10px 0;
+    }
+    &__items {
+      @include flex();
+      &__link {
+        @include font-stack($size-text, $weight-text, $white);
+        margin: 0 5px;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import './variables.scss';
+
+
+//response mixins
+@mixin tablet {
+    @media (min-width: $for-tablet) {@content;}
+}
+
+@mixin desktop {
+    @media (min-width: $for-desktope) {@content;}
+}
+
+@mixin responsive {
+    @include tablet {
+        width: 500px;
+      }
+      @include desktop {
+        width: 900px;
+      }
+}
+
+
+//repetitive styles
+@mixin flex() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+//font styles
+@mixin font-stack($font-size, $font-weight, $color) {
+  font-family: $font-stack;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+}
